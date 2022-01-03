@@ -1,0 +1,17 @@
+/*css-reset import*/
+@import "./_reset.scss";
+/*google fonts*/
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+/*colors*/
+$darkCyan: hsl(185, 75%, 39%);
+$darkBlue: hsl(229, 23%, 23%);
+$greyBlue: hsl(227, 10%, 46%);
+$darkGrey: hsl(0, 0%, 59%);
+
+/*font-size*/
+$fontSize: 1.125em;
+
+/*font-weights*/
+$normal: 400;
+$bold: 700;
