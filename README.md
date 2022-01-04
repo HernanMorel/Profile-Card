@@ -11,3 +11,5 @@ I opted to created the background circles with CSS as opposed to using a static 
 - SCSS/SASS
 - Flexbox
 - Mobile-first workflow
+- 
+![desktop-preview](https://user-images.githubusercontent.com/84929479/148133277-f34c22cb-2f9d-445a-817f-b52af336be2d.jpg)
