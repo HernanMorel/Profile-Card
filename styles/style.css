@@ -52,7 +52,8 @@ using CSS*/
   border-radius: 50%;
   width: 61em;
   height: 61em;
-  right: 60em;
+  right: 52.5%;
+  /*using percentages as the given widths are better suited for screen adjustments*/
   bottom: 20em;
   opacity: 0.4;
   -webkit-transform: rotate(-180deg);
@@ -71,7 +72,8 @@ using CSS*/
   border-radius: 50%;
   width: 65em;
   height: 68em;
-  left: 50em;
+  left: 46%;
+  /*using percentages as the given widths are better suited for screen adjustments*/
   top: 28em;
   opacity: 0.25;
   -webkit-transform: rotate(-315deg);
@@ -82,7 +84,7 @@ using CSS*/
 /*main-container styles*/
 .main-container {
   width: 22.875em;
-  height: 25.375em;
+  height: 23.5em;
   background-color: white;
   -webkit-box-shadow: 0px 50px 100px -20px rgba(8, 70, 94, 0.504835);
           box-shadow: 0px 50px 100px -20px rgba(8, 70, 94, 0.504835);
@@ -117,9 +119,9 @@ using CSS*/
 }
 
 .name-header {
-  font-weight: 700;
+  font-weight: 400;
   font-size: 1.125em;
-  color: #2d3248;
+  color: #2d3348;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -145,19 +147,20 @@ using CSS*/
 }
 
 .name-header span {
-  margin: 0;
   font-weight: 400;
-  color: #969696;
+  color: #6c7184;
+  margin-left: 0.12125em;
 }
 
 .name-header #city {
   font-size: 0.875em;
   font-weight: 400;
-  padding-top: 0.5em;
-  color: #969696;
+  padding-top: 0.1em;
+  color: #6c7184;
 }
 
 .bottom-block {
+  /*The hr elements added on top of the block as opposed to hard coding it on the markup, this gives you more control on where it is placed on the container.*/
   border-top: 1px solid #e9eaed;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -168,9 +171,35 @@ using CSS*/
           flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-top: 4em;
+  margin-top: 3em;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  margin-bottom: 1em;
+}
+
+.bottom-block h3 {
+  text-align: center;
+  color: #2d3348;
+  font-size: 1.125em;
+  font-weight: 700;
+  margin-bottom: 0.5625em;
+}
+
+.bottom-block p {
+  text-align: center;
+  font-size: 0.625em;
+  line-height: 0.624em;
+  letter-spacing: 0.09475em;
+  /*Definitely some hacky em numbers, but through my mathematical prowess I was able to decipher said code*/
+  color: #6c7184;
+}
+
+@media only screen and (max-width: 395px) {
+  .circle-2 {
+    left: 18%;
+    -webkit-transform: rotate(-350deg);
+            transform: rotate(-350deg);
+  }
 }
 /*# sourceMappingURL=style.css.map */

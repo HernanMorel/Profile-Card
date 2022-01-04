@@ -8,9 +8,8 @@
 @import "./_body";
 
 /*colors*/
-$darkCyan: hsl(185, 75%, 39%);
-$darkBlue: hsl(229, 23%, 23%);
-$greyBlue: hsl(227, 10%, 46%);
+$darkBlue: hsla(228, 23%, 23%, 1);
+$greyBlue: hsla(228, 10%, 47%, 1);
 $darkGrey: hsl(0, 0%, 59%);
 $white: hsl(0, 0%, 100%);
 $hrColor: hsl(225, 10%, 92%);
@@ -19,8 +18,8 @@ $hrColor: hsl(225, 10%, 92%);
 $fontSize: 1.125em;
 
 /*font-weights*/
-$normal: 400;
-$bold: 700;
+$normal-weight: 400;
+$bold-weight: 700;
 
 /*Applied Styles Below*/
 
@@ -37,7 +36,8 @@ using CSS*/
   border-radius: 50%;
   width: 61em;
   height: 61em;
-  right: 60em;
+  right: 52.5%;
+  /*using percentages as the given widths are better suited for screen adjustments*/
   bottom: 20em;
   opacity: 0.4;
   transform: rotate(-180deg);
@@ -55,7 +55,8 @@ using CSS*/
   border-radius: 50%;
   width: 65em;
   height: 68em;
-  left: 50em;
+  left: 46%;
+  /*using percentages as the given widths are better suited for screen adjustments*/
   top: 28em;
   opacity: 0.25;
   transform: rotate(-315deg);
@@ -65,7 +66,7 @@ using CSS*/
 
 .main-container {
   width: 22.875em;
-  height: 25.375em;
+  height: 23.5em;
   background-color: $white;
   box-shadow: 0px 50px 100px -20px rgba(8, 70, 94, 0.504835);
   border-radius: 15px;
@@ -99,7 +100,7 @@ using CSS*/
 }
 
 .name-header {
-  font-weight: $bold;
+  font-weight: $normal-weight;
   font-size: $fontSize;
   color: $darkBlue;
   display: flex;
@@ -115,23 +116,46 @@ using CSS*/
     margin: 0;
   }
   span {
-    margin: 0;
-    font-weight: $normal;
-    color: $darkGrey;
+    font-weight: $normal-weight;
+    color: $greyBlue;
+    margin-left: 0.12125em;
   }
   #city {
     font-size: 0.875em;
-    font-weight: $normal;
-    padding-top: 0.5em;
-    color: $darkGrey;
+    font-weight: $normal-weight;
+    padding-top: 0.1em;
+    color: $greyBlue;
   }
 }
 
 .bottom-block {
+  /*The hr elements added on top of the block as opposed to hard coding it on the markup, this gives you more control on where it is placed on the container.*/
   border-top: 1px solid $hrColor;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin-top: 4em;
+  margin-top: 3em;
   justify-content: space-evenly;
+  margin-bottom: 1em;
+  h3 {
+    text-align: center;
+    color: $darkBlue;
+    font-size: $fontSize;
+    font-weight: $bold-weight;
+    margin-bottom: 0.5625em;
+  }
+  p {
+    text-align: center;
+    font-size: 0.625em;
+    line-height: 0.624em;
+    letter-spacing: 0.09475em; /*Definitely some hacky em numbers, but through my mathematical prowess I was able to decipher said code*/
+    color: $greyBlue;
+  }
+}
+
+@media only screen and (max-width: 395px) {
+  .circle-2 {
+    left: 18%;
+    transform: rotate(-350deg);
+  }
 }
