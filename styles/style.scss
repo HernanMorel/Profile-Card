@@ -1,7 +1,11 @@
 /*css-reset import*/
-@import "./_reset.scss";
+@import "./_reset";
+
 /*google fonts*/
 @import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+/*Body Styles*/
+@import "./_body";
 
 /*colors*/
 $darkCyan: hsl(185, 75%, 39%);
@@ -15,3 +19,34 @@ $fontSize: 1.125em;
 /*font-weights*/
 $normal: 400;
 $bold: 700;
+
+.circle-1 {
+  position: absolute;
+  background: linear-gradient(
+    180deg,
+    rgba(9, 137, 180, 0.0001) 0.78%,
+    #53ffee 99.94%
+  );
+  border-radius: 50%;
+  width: 61em;
+  height: 61em;
+  right: 60em;
+  bottom: 20em;
+  opacity: 0.4;
+  transform: rotate(-180deg);
+}
+.circle-2 {
+  position: absolute;
+  background: linear-gradient(
+    180deg,
+    rgba(9, 137, 180, 0.0001) 0.78%,
+    #53ffee 99.94%
+  );
+  border-radius: 50%;
+  width: 65em;
+  height: 68em;
+  left: 50em;
+  top: 28em;
+  opacity: 0.25;
+  transform: rotate(-315deg);
+}

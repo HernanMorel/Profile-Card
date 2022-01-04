@@ -1,6 +1,7 @@
 /*css-reset import*/
 @import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
 body {
+  padding: 0px;
   margin: 0px;
 }
 
@@ -18,7 +19,50 @@ html *::after {
 }
 
 /*google fonts*/
+/*Body Styles*/
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #19a2ae;
+}
+
 /*colors*/
 /*font-size*/
 /*font-weights*/
+.circle-1 {
+  position: absolute;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0.78%, rgba(9, 137, 180, 0.0001)), color-stop(99.94%, #53ffee));
+  background: linear-gradient(180deg, rgba(9, 137, 180, 0.0001) 0.78%, #53ffee 99.94%);
+  border-radius: 50%;
+  width: 61em;
+  height: 61em;
+  right: 60em;
+  bottom: 20em;
+  opacity: 0.4;
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+}
+
+.circle-2 {
+  position: absolute;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0.78%, rgba(9, 137, 180, 0.0001)), color-stop(99.94%, #53ffee));
+  background: linear-gradient(180deg, rgba(9, 137, 180, 0.0001) 0.78%, #53ffee 99.94%);
+  border-radius: 50%;
+  width: 65em;
+  height: 68em;
+  left: 50em;
+  top: 28em;
+  opacity: 0.25;
+  -webkit-transform: rotate(-315deg);
+          transform: rotate(-315deg);
+}
 /*# sourceMappingURL=style.css.map */
