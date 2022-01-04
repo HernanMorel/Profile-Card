@@ -13,8 +13,9 @@ $darkBlue: hsl(229, 23%, 23%);
 $greyBlue: hsl(227, 10%, 46%);
 $darkGrey: hsl(0, 0%, 59%);
 $white: hsl(0, 0%, 100%);
-
+$hrColor: hsl(225, 10%, 92%);
 /*font-size*/
+
 $fontSize: 1.125em;
 
 /*font-weights*/
@@ -26,6 +27,7 @@ $bold: 700;
 /*The challenge called for using the prescribed images to acts like the circles in the background, I attempted to make them
 using CSS*/
 .circle-1 {
+  display: flex;
   position: absolute;
   background: linear-gradient(
     180deg,
@@ -39,9 +41,11 @@ using CSS*/
   bottom: 20em;
   opacity: 0.4;
   transform: rotate(-180deg);
+  z-index: 0;
 }
 /*The rotational degrees and still vary slightly from each of the visible circles on the background.*/
 .circle-2 {
+  display: flex;
   position: absolute;
   background: linear-gradient(
     180deg,
@@ -55,15 +59,79 @@ using CSS*/
   top: 28em;
   opacity: 0.25;
   transform: rotate(-315deg);
+  z-index: 0;
 }
+/*main-container styles*/
+
 .main-container {
-  width: 21.875em;
+  width: 22.875em;
+  height: 25.375em;
   background-color: $white;
   box-shadow: 0px 50px 100px -20px rgba(8, 70, 94, 0.504835);
   border-radius: 15px;
+  z-index: 1;
 }
 
-.image-top {
+/*Giving the top image container a position of relative allows me to better structure and organize the two images*/
+.top-container {
+  width: 100%;
+  position: relative;
+}
+
+#card-top-image {
+  width: 100%;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
+}
+
+/*Giving the thumbnail image a position of absolute allows me to better structure and organize the image*/
+#thumbnail {
+  position: absolute;
+  width: 6em;
+  height: 6em;
+  border: 6px solid $white;
+  background-color: $white;
+  border-radius: 50%;
+  top: 60%;
+  left: 37%;
+  float: inherit;
+  shape-outside: circle(50%);
+}
+
+.name-header {
+  font-weight: $bold;
+  font-size: $fontSize;
+  color: $darkBlue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 1em;
+  line-height: 1.125em;
+  padding-top: 5em;
+  text-align: center;
+  h3 {
+    margin: 0;
+  }
+  span {
+    margin: 0;
+    font-weight: $normal;
+    color: $darkGrey;
+  }
+  #city {
+    font-size: 0.875em;
+    font-weight: $normal;
+    padding-top: 0.5em;
+    color: $darkGrey;
+  }
+}
+
+.bottom-block {
+  border-top: 1px solid $hrColor;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 4em;
+  justify-content: space-evenly;
 }

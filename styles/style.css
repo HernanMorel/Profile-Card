@@ -43,6 +43,9 @@ body {
 /*The challenge called for using the prescribed images to acts like the circles in the background, I attempted to make them
 using CSS*/
 .circle-1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   position: absolute;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0.78%, rgba(9, 137, 180, 0.0001)), color-stop(99.94%, #53ffee));
   background: linear-gradient(180deg, rgba(9, 137, 180, 0.0001) 0.78%, #53ffee 99.94%);
@@ -54,10 +57,14 @@ using CSS*/
   opacity: 0.4;
   -webkit-transform: rotate(-180deg);
           transform: rotate(-180deg);
+  z-index: 0;
 }
 
 /*The rotational degrees and still vary slightly from each of the visible circles on the background.*/
 .circle-2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   position: absolute;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0.78%, rgba(9, 137, 180, 0.0001)), color-stop(99.94%, #53ffee));
   background: linear-gradient(180deg, rgba(9, 137, 180, 0.0001) 0.78%, #53ffee 99.94%);
@@ -69,18 +76,101 @@ using CSS*/
   opacity: 0.25;
   -webkit-transform: rotate(-315deg);
           transform: rotate(-315deg);
+  z-index: 0;
 }
 
+/*main-container styles*/
 .main-container {
-  width: 21.875em;
+  width: 22.875em;
+  height: 25.375em;
   background-color: white;
   -webkit-box-shadow: 0px 50px 100px -20px rgba(8, 70, 94, 0.504835);
           box-shadow: 0px 50px 100px -20px rgba(8, 70, 94, 0.504835);
   border-radius: 15px;
+  z-index: 1;
 }
 
-.image-top {
+/*Giving the top image container a position of relative allows me to better structure and organize the two images*/
+.top-container {
+  width: 100%;
+  position: relative;
+}
+
+#card-top-image {
+  width: 100%;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
+}
+
+/*Giving the thumbnail image a position of absolute allows me to better structure and organize the image*/
+#thumbnail {
+  position: absolute;
+  width: 6em;
+  height: 6em;
+  border: 6px solid white;
+  background-color: white;
+  border-radius: 50%;
+  top: 60%;
+  left: 37%;
+  float: inherit;
+  shape-outside: circle(50%);
+}
+
+.name-header {
+  font-weight: 700;
+  font-size: 1.125em;
+  color: #2d3248;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  height: 1em;
+  line-height: 1.125em;
+  padding-top: 5em;
+  text-align: center;
+}
+
+.name-header h3 {
+  margin: 0;
+}
+
+.name-header span {
+  margin: 0;
+  font-weight: 400;
+  color: #969696;
+}
+
+.name-header #city {
+  font-size: 0.875em;
+  font-weight: 400;
+  padding-top: 0.5em;
+  color: #969696;
+}
+
+.bottom-block {
+  border-top: 1px solid #e9eaed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 4em;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 /*# sourceMappingURL=style.css.map */
